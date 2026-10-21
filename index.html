@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut House</title>
+    <link rel="icon" href="img/pNG DEL LOGO OTRO.png">
+    <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<header>
+ <a href="inde" class="logo2"><img src="img/pNG DEL LOGO OTRO.png" alt="" class="logo"></a>
+ <nav>
+    <ul class="navegacion">
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="promociones.html">Promociones</a></li>
+          <li><a href="Merchandise.html">Merchandise</a></li>
+    </ul>
+ </nav>
+
+ <a href="registro.html"class="register"><img src="img/user.png" alt="" >Registro</a>
+
+</header>
+
+
+
+<div class="gif"><img src="img/dona_animada.gif" alt=""></div>
+<div class="bienvenido"><img src="img/bienvenido.png" alt=""></div>
+<main>
+        <!-- CARRUSEL -->
+        <div class="carousel-window">
+            <div class="carousel-track" id="track">
+
+                <!-- CARD 1 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="img/Promooooo de Jostinnnbb.jpg"
+                             alt="Bebidas de otoño">
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="card-title">
+                            Tu combo perfecto,para que te sientas contento
+                            </h2>
+
+                        <a href="promociones.html" class="card-link">
+                            Descubre mas
+                            <span>›</span>
+                        </a>
+                    </div>
+                </article>
+
+
+                <!-- CARD 2 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="img/Donut miñuuuuuu (2).jpg"
+                             alt="Snoopy Glass Cold Cup">
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="card-title">
+                            Llega el Snoopy™ Glass Cold Cup
+                        </h2>
+
+                        <a href="promociones.html" class="card-link">
+                            Descubre cómo conseguirlo
+                            <span>›</span>
+                        </a>
+                    </div>
+                </article>
+
+
+                <!-- CARD 3 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="img/dondonut_1672x941.jpg"
+                             alt="Novedades de otoño">
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="card-title">
+                            Viste tus días de otoño
+                        </h2>
+
+                        <a href="promociones.html" class="card-link">
+                            Descubre las novedades
+                            <span>›</span>
+                        </a>
+                    </div>
+                </article>  
+            </div>
+        </div>
+        <div class="dots">
+
+            <button class="dot active" onclick="goToSlide(0)"></button>
+            <button class="dot" onclick="goToSlide(1)"></button>
+             <button class="dot" onclick="goToSlide(2)"></button>
+        </div>
+    </section>
+ <script>
+        const track = document.getElementById("track");
+        const dots = document.querySelectorAll(".dot");
+
+        let currentSlide = 0;
+
+        const cardWidth = 348;
+        const gap = 20;
+
+        function moveCarousel(direction) {
+
+            currentSlide += direction;
+
+            if (currentSlide < 0) {
+                currentSlide = 0;
+            }
+
+            if (currentSlide > 2) {
+                currentSlide = 2;
+            }
+
+            updateCarousel();
+        }
+
+
+        function goToSlide(slide) {
+
+            currentSlide = slide;
+
+            if (currentSlide > 2) {
+                currentSlide = 2;
+            }
+
+            updateCarousel();
+        }
+
+
+        function updateCarousel() {
+
+            const position =
+                currentSlide * (cardWidth + gap);
+
+            track.style.transform =
+                `translateX(-${position}px)`;
+
+            dots.forEach((dot, index) => {
+                dot.classList.toggle(
+                    "active",
+                    index === currentSlide
+                );
+            });
+        }
+    </script>
+   
+  
+</main> 
+<footer class="footer">
+
+    <div class="footer-contenido">
+
+        <!-- LOGO -->
+        <div class="footer-logo">
+            <img src="img/pNG DEL LOGO OTRO.png" alt="Logo">
+        </div>
+
+        <!-- COLUMNA 1 -->
+        <div class="footer-columna">
+            <h3>Sobre Nosotros</h3>
+            <a href="#">Acerca de nosotros</a>
+            <a href="#">Sala de Prensa</a>
+            <a href="#">Atención al Cliente</a>
+            <a href="#">Preguntas Frecuentes</a>
+            <a href="#">Accesibilidad</a>
+        </div>
+
+       
+        <!-- COLUMNA 2 -->
+        <div class="footer-columna">
+            <h3>Trabaja con nosotros</h3>
+            <a href="#">Únete a nuestro equipo</a>
+            <a href="#">Oportunidades de trabajo</a>
+        </div>
+
+        <!-- COLUMNA 3 -->
+        <div class="footer-columna">
+            <h3>Responsabilidad</h3>
+            <a href="#">Nuestra Responsabilidad</a>
+            <a href="#">Compromiso con la comunidad</a>
+        </div>
+
+    </div>
+
+
+    <!-- LINEA -->
+    <div class="footer-linea"></div>
+
+
+    <!-- PARTE INFERIOR -->
+    <div class="footer-inferior">
+
+        <div class="footer-enlaces">
+            <a href="#">Contacto</a>
+            <a href="#">Política de Privacidad</a>
+            <a href="#">Política de Cookies</a>
+            <a href="#">Configurador de Cookies</a>
+            <a href="#">Sitemap</a>
+
+            <a href="#">Aviso Legal y Condiciones de Compra</a>
+            <a href="#">Términos y Condiciones</a>
+        </div>
+
+
+        <!-- REDES SOCIALES -->
+        <div class="redes-sociales">
+
+            <a href="#" class="red">f</a>
+            <a href="#" class="red">◎</a>
+            <a href="#" class="red">♪</a>
+            <a href="#" class="red">𝕏</a>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+        <p class="donuthouse">
+            © 2026 Donut House.
+        </p>
+
+    </div>
+
+</footer>
+</body>
+</html>     
